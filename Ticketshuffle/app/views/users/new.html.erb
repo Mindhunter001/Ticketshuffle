@@ -1,22 +1,5 @@
 <h1>New Supporter</h1>
 
-<%= form_for :user, url: users_path do |f| %>
-  <p>
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nickname %>
-  </p>
+<%= render 'formular' %>
 
-  <p>
-    <%= f.label :firstname %><br>
-    <%= f.text_field :firstname %>
-  </p>
-
-  <p>
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<%end%>
+<%= link_to 'Back', users_path %>

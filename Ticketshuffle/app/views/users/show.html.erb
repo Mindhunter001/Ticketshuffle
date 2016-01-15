@@ -1,7 +1,24 @@
 
 <h1>Supporter</h1>
 <p>
-  <strong>
-     <%= @user.lastname %> 
+
+
+  <br>
+    <strong>
+     <%= @user.lastname %>
   </strong>
+  , <%= @user.firstname %>
+
+  <br>
+  <%= @user.nickname %> hat schon <%= @user.tickets %> gewonnen.
+  <br>
+
 </p>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Delete', user_path(@user),
+  method: :Delete,
+  data: { confirm: 'Bist du dir sicher?' } %> |
+<%= link_to 'Back', users_path %>
