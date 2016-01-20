@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119103715) do
+ActiveRecord::Schema.define(version: 20160120124541) do
 
   create_table "shuffles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20160119103715) do
     t.string   "firstname",  limit: 255
     t.string   "lastname",   limit: 255
     t.integer  "tickets",    limit: 4,   default: 0
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "games",      limit: 4,   default: 0
+    t.boolean  "active",                 default: true
   end
 
 end

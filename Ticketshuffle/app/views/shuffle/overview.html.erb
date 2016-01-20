@@ -1,5 +1,24 @@
-<html>
-<body>
-<p>test</p>
-</body
-</html>
+<h1>Wer ist alles anwesend?</h1><br>
+
+<table>
+  <tr>
+    <% @users.each do |user| %>
+    <% if user.active %>
+
+
+    <td>
+      <%= user.nickname %>
+    </td>
+    <% end %>
+    <% end %>
+
+  </tr>
+</table>
+<br>
+<br>
+<br>
+
+
+
+<%= link_to 'Startseite', root_path %>
+<%= link_to 'Supporter', users_path %>

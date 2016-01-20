@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'overview' =>'games#view'
+  get 'overview' =>'shuffle#overview'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
