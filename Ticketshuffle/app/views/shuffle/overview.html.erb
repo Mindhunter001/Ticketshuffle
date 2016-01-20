@@ -3,15 +3,20 @@
 <table>
   <tr>
     <% @users.each do |user| %>
-    <% if user.active %>
-
-
     <td>
-      <%= user.nickname %>
+    <% if user.active %>
+      <p><font color="green"><%= user.nickname %></p>
+    <% else %>
+      <p><font color="red"><%= user.nickname %></p>
+
     </td>
     <% end %>
     <% end %>
-
+  </tr>
+  <tr>
+    <% @users.each do |user| %>
+      <%= link_to 'toggle anwesenheit', 
+    <% end %>
   </tr>
 </table>
 <br>

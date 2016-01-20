@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get 'overview' =>'shuffle#overview'
+  get 'overview' => 'shuffle#overview'
+  put 'overview' => 'shuffle#toggleactive'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  #welcome :welcome
+  #   welcome :welcome
 
   # Example resource route with options:
   #   resources :products do

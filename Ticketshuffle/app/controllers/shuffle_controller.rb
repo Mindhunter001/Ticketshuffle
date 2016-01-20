@@ -5,4 +5,11 @@ class ShuffleController < ApplicationController
 
   def shuffle
   end
+
+  def toggleactive
+    @user = User.find(params[:id])
+
+      if user.update(params[:active])
+        redirect_to overview_path
+  end
 end
