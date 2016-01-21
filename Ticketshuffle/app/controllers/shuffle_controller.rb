@@ -8,8 +8,8 @@ class ShuffleController < ApplicationController
 
   def toggleactive
     @user = User.find(params[:id])
+    @user.update(active: !@user.active)
 
-      if user.update(params[:active])
-        redirect_to overview_path
+    redirect_to :Back
   end
 end

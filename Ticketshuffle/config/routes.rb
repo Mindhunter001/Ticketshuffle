@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users
 
   get 'overview' => 'shuffle#overview'
-  put 'overview' => 'shuffle#toggleactive'
+  post 'overview' => 'shuffle#toggleactive'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
