@@ -5,7 +5,7 @@
     <% @users.each do |user| %>
     <td>
     <% if user.active %>
-      <p><font color="green"><%= user.nickname %> ist <%= user.active %></p>
+      <p><font color="green"><%= user.nickname %></p>
     <% else %>
       <p><font color="red"><%= user.nickname %></p>
 
@@ -16,7 +16,7 @@
   <tr>
     <% @users.each do |user| %>
       <td>
-        <%= link_to 'toggle anwesenheit', controller: :shuffle, action: :toggleactive, id: user.id %>
+        <%= link_to 'Anwesendheit Umschalten', controller: :shuffle, action: :toggleactive, id: user.id %>
       </td>
     <% end %>
   </tr>
@@ -24,8 +24,13 @@
 <br>
 <br>
 <br>
-
-
+<h1>Bereit ein Spiel zu spielen?</h1>
+<p>
+  <%= link_to 'Shuffle', shuffle_path%>
+</p>
+<br>
+<br>
+<br>
 
 <%= link_to 'Startseite', root_path %>
 <%= link_to 'Supporter', users_path %>
