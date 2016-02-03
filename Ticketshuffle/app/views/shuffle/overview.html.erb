@@ -3,23 +3,25 @@
 <table>
   <tr>
     <% @users.each do |user| %>
-    <td>
-    <% if user.active %>
-      <p><font color="green"><%= user.nickname %></p>
-    <% else %>
-      <p><font color="red"><%= user.nickname %></p>
-
+    <td align="center" >
+      <p><%= user.nickname %></p>
     </td>
-    <% end %>
-    <% end %>
-  </tr>
-  <tr>
-    <% @users.each do |user| %>
-      <td>
-        <%= link_to 'Anwesendheit Umschalten', controller: :shuffle, action: :toggleactive, id: user.id %>
-      </td>
+
     <% end %>
   </tr>
+
+<tr>
+  <% @users.each do |user| %>
+    <td>
+      <% if user.active %>
+        <%= link_to image_tag('call.png', alt: '"designed by freepic', size: '128' ), url_for({controller: :shuffle, action: :toggleactive, id: user.id}) %>
+      <% else %>
+        <%= link_to image_tag('chair.png', alt: '"designed by freepic', size: '128' ), url_for({controller: :shuffle, action: :toggleactive, id: user.id})  %>
+      <% end %>
+    </td>
+  <% end %>
+
+</tr>
 </table>
 <br>
 <br>
