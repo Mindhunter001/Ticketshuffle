@@ -18,7 +18,7 @@ class ShuffleController < ApplicationController
     end
 
     @totalchanches = rand(@totalchanches)
-    @sum = @totalchanches
+
     @users.each do |user|
       if (@totalchanches > user.chance)
         @totalchanches -= user.chance
